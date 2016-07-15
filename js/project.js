@@ -1,14 +1,22 @@
 var ctemp;
+var ftemp;
 
 
-function calculateTotal() {
-ctemp = document.getELementById("ctemp").value;
-
-
+function calculateTotalFTemp() {
+document.body.style.backgroundColor = "red";
+ctemp = document.getElementById("ctemp").value;
 var ftemp = (ctemp * 1.8) +32;
-
-document.getElementById("solution").innerHTML = ftemp;
-
+document.getElementById("solutionF").innerHTML = ftemp;
 }
 
-document.getElementById("clickme").onclick = calculateTotal;
+document.getElementById("clickmeF").onclick = calculateTotalFTemp;
+
+
+function calculateTotalCTemp() {
+document.body.style.backgroundColor = "blue";
+ftemp = document.getElementById("ftemp").value;
+var ctemp = (ftemp - 32) / 1.8;
+document.getElementById("solutionC").innerHTML = ctemp;
+}
+
+document.getElementById("clickme").onclick = calculateTotalCTemp;
